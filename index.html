@@ -5,72 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jiyeon Kwon — IT Consultant · GRC · AI</title>
 <meta name="description" content="Jiyeon Kwon — Microsoft D365 · M365 IT Consultant (10+ yrs), GRC & compliance practitioner, bilingual EN/KO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #1a1a1a;
-    --paper: #fafafa;
-    --line: #e2e2e2;
-    --muted: #6b6b6b;
-    --accent: #0f5c3f;
+    --ink: #000;
+    --paper: #fff;
+    --serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    --sans: 'Inter', -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
-    font-family: "Inter", -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-family: var(--sans);
     background: var(--paper);
     color: var(--ink);
-    line-height: 1.65;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  header.hero { padding: 88px 0 56px; border-bottom: 2px solid var(--ink); }
-  header.hero h1 { font-size: 44px; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 0 32px; }
+  header.hero { background: var(--ink); color: var(--paper); padding: 120px 0 88px; }
+  figure.editorial { background: var(--ink); margin: 0; padding: 0 0 88px; }
+  figure.editorial .frame { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
+  figure.editorial img {
+    width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block;
+    filter: grayscale(1) contrast(1.08);
+  }
+  figure.editorial .placeholder {
+    width: 100%; aspect-ratio: 16 / 9;
+    border: 1px dashed rgba(255,255,255,0.35);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.5); font-size: 13px; letter-spacing: 0.08em;
+    text-align: center; padding: 24px; line-height: 1.9;
+  }
+  figure.editorial figcaption {
+    margin-top: 18px; font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase;
+    color: rgba(255,255,255,0.45); font-weight: 600;
+  }
+  header.hero .kicker {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase;
+    opacity: 0.6; margin-bottom: 32px;
+  }
+  header.hero h1 {
+    font-family: var(--serif);
+    font-size: 76px; font-weight: 400; letter-spacing: -0.015em; line-height: 1.02;
+  }
+  header.hero h1 em { font-style: italic; }
   header.hero .tagline {
-    margin-top: 16px; font-size: 17px; font-weight: 600; color: var(--accent);
+    margin-top: 30px; font-size: 15px; font-weight: 500; line-height: 1.8; opacity: 0.8;
+    max-width: 640px; letter-spacing: 0.01em;
   }
-  header.hero .contact { margin-top: 20px; font-size: 14px; color: var(--muted); }
-  header.hero .contact a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); }
-  header.hero .contact a:hover { color: var(--accent); border-color: var(--accent); }
-  section { padding: 48px 0; border-bottom: 1px solid var(--line); }
+  header.hero .contact { margin-top: 36px; font-size: 13.5px; letter-spacing: 0.02em; }
+  header.hero .contact a { color: var(--paper); text-decoration: none; border-bottom: 1px solid var(--paper); padding-bottom: 1px; }
+  header.hero .contact span.sep { opacity: 0.35; margin: 0 12px; }
+  section { padding: 72px 0; border-bottom: 1px solid var(--ink); }
   section:last-of-type { border-bottom: none; }
   h2 {
-    font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
-    color: var(--muted); margin-bottom: 24px;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase;
+    margin-bottom: 40px;
   }
-  .lede { font-size: 19px; line-height: 1.7; }
-  .lede strong { font-weight: 700; }
-  .job { margin-bottom: 32px; }
+  .lede {
+    font-family: var(--serif);
+    font-size: 24px; line-height: 1.65; max-width: 700px;
+  }
+  .lede strong { font-weight: 400; font-style: italic; }
+  .job { margin-bottom: 44px; }
   .job:last-child { margin-bottom: 0; }
-  .job .role { font-size: 18px; font-weight: 700; }
-  .job .meta { font-size: 14px; color: var(--muted); margin: 4px 0 10px; }
+  .job .role {
+    font-family: var(--serif);
+    font-size: 28px; font-weight: 400; letter-spacing: -0.01em; line-height: 1.25;
+  }
+  .job .meta { font-size: 12.5px; font-weight: 500; letter-spacing: 0.06em; margin: 10px 0 16px; opacity: 0.55; }
   .job ul { list-style: none; }
-  .job ul li { position: relative; padding-left: 18px; margin-bottom: 6px; font-size: 15px; }
-  .job ul li::before { content: "—"; position: absolute; left: 0; color: var(--muted); }
-  .cert { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .job ul li { position: relative; padding-left: 24px; margin-bottom: 9px; font-size: 15px; line-height: 1.7; }
+  .job ul li::before { content: "—"; position: absolute; left: 0; font-weight: 600; }
+  .cert { display: flex; justify-content: space-between; gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--ink); font-size: 15px; }
   .cert:last-child { border-bottom: none; }
-  .cert .issuer { color: var(--muted); font-size: 13px; }
-  .cert .date { color: var(--muted); font-size: 13px; white-space: nowrap; }
-  .skills { font-size: 15px; line-height: 2; }
-  .skills span { display: inline-block; border: 1px solid var(--line); padding: 2px 10px; margin: 0 6px 8px 0; font-size: 13px; }
-  .lang { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .cert .name { font-weight: 600; letter-spacing: -0.005em; }
+  .cert .issuer { font-size: 13px; margin-top: 4px; opacity: 0.55; }
+  .cert .date { font-size: 12.5px; font-weight: 600; white-space: nowrap; letter-spacing: 0.06em; }
+  .skills { font-size: 13.5px; line-height: 2.3; font-weight: 500; letter-spacing: 0.01em; }
+  .skills span { display: inline-block; border: 1px solid var(--ink); padding: 5px 15px; margin: 0 8px 10px 0; }
+  .lang { display: flex; justify-content: space-between; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--ink); }
   .lang:last-child { border-bottom: none; }
-  .lang .level { color: var(--muted); font-size: 13px; }
-  footer { padding: 40px 0 64px; font-size: 13px; color: var(--muted); }
+  .lang .lname { font-family: var(--serif); font-size: 20px; }
+  .lang .level { font-size: 12.5px; opacity: 0.55; max-width: 58%; text-align: right; line-height: 1.6; }
+  footer { padding: 52px 0 88px; font-size: 12.5px; letter-spacing: 0.03em; }
   footer a { color: var(--ink); }
   @media (max-width: 600px) {
-    header.hero h1 { font-size: 34px; }
-    header.hero { padding: 56px 0 40px; }
-    .lede { font-size: 17px; }
+    header.hero h1 { font-size: 52px; }
+    header.hero { padding: 80px 0 64px; }
+    .lede { font-size: 20px; }
+    .job .role { font-size: 23px; }
+    .wrap { padding: 0 22px; }
   }
 </style>
 </head>
 <body>
-<div class="wrap">
-
-  <header class="hero">
-    <h1>Jiyeon Kwon</h1>
-    <p class="tagline">Microsoft D365 · M365 IT Consultant (10+ yrs) &nbsp;|&nbsp; GRC · CMMC · Compliance · Risk Management &nbsp;|&nbsp; Bilingual EN/KO</p>
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Portfolio</p>
+    <h1>Jiyeon <em>Kwon</em></h1>
+    <p class="tagline">Microsoft D365 · M365 IT Consultant — 10+ years<br>GRC · CMMC · Compliance · Risk Management<br>Bilingual EN / KO</p>
     <p class="contact">Seoul, South Korea &nbsp;·&nbsp; <a href="mailto:jia.kwon.au@gmail.com">jia.kwon.au@gmail.com</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/jiyeonkwon">LinkedIn</a> &nbsp;·&nbsp; <a href="https://klocastudio.com">klocastudio.com</a></p>
-  </header>
+  </div>
+</header>
+
+<figure class="editorial">
+  <div class="frame">
+    <img src="portrait-bw.jpg" alt="Jiyeon Kwon — portrait">
+    <figcaption>Portrait</figcaption>
+  </div>
+</figure>
+
+<div class="wrap">
 
   <section>
     <h2>About</h2>
@@ -142,7 +191,7 @@
   <section>
     <h2>Certifications</h2>
     <div class="cert"><div><div>Microsoft Certified: Power Platform Solution Architect Expert</div><div class="issuer">Microsoft</div></div><div class="date">Valid until Jan 2027</div></div>
-    <div class="cert"><div><div>AI Utilization Instructor, Level 1</div><div class="issuer">Korea Lifelong Learning Association (한국평생학습진흥원) · Registered private qualification, Korea</div></div><div class="date">Oct 2025</div></div>
+    <div class="cert"><div><div>AI Utilization Instructor, Level 1</div><div class="issuer">Korea Lifelong Learning Promotion Agency · Registered private qualification, Korea</div></div><div class="date">Oct 2025</div></div>
     <div class="cert"><div><div>Digital Academy Professional Instructor Training</div><div class="issuer">Gyeonggi-do (G-SEEK) · Certificate of Completion</div></div><div class="date">Oct 2025</div></div>
     <div class="cert"><div><div>AI Literacy Education (Cohort 2)</div><div class="issuer">Gyeonggi Business &amp; Science Accelerator &amp; Ablearn · Certificate of Completion</div></div><div class="date">Sep 2025</div></div>
     <div class="cert"><div><div>Microsoft Certified: Dynamics 365 Sales Functional Consultant Associate</div><div class="issuer">Microsoft</div></div><div class="date">&nbsp;</div></div>
